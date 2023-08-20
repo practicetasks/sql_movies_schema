@@ -69,7 +69,7 @@ insert into movies (id, title, release_year, rating) values (4, 'Крестны�
 insert into movies (id, title, release_year, rating) values (5, 'Список Шиндлера', 1993, 9.0);
 insert into movies (id, title, release_year, rating) values (6, 'Властелин Колец: Возвращение Короля', 2003, 9.0);
 insert into movies (id, title, release_year, rating) values (7, 'Криминальное Чтиво', 1994, 9.0);
-insert into movies (id, title, release_year, rating) values (8, 'Властелин Колец: Братство Кольца', 8.8, 2001);
+insert into movies (id, title, release_year, rating) values (8, 'Властелин Колец: Братство Кольца', 2001, 8.8);
 insert into movies (id, title, release_year, rating) values (9, 'Форрест Гамп', 1994, 8.8);
 insert into movies (id, title, release_year, rating) values (10, 'Бойцовский Клуб', 1999, 8.8);
 insert into movies (id, title, release_year, rating) values (11, 'Властелин Колец: Две Крепости', 2002, 8.8);
