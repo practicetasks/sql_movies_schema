@@ -3,40 +3,39 @@
 
 ### TABLES
 ```sql
-create table genres
-(
-    id   serial8 primary key,
+create table genres (
+    id serial8 primary key,
     name varchar(50) not null
 );
 
-create table movies_genres(
+create table actors (
+    id serial8 primary key,
+    name varchar(50) not null,
+    lastname varchar(50) not null,
+    birth_year int2
+);
+
+create table movies (
+    id serial8 primary key,
+    title varchar(100) not null,
+    release_year int2 not null,
+    rating float4 not null
+);
+
+create table movies_genres (
     genre_id int8 not null,
     movie_id int8 not null,
-    foreign key (genre_id) references genres(id),
-    foreign key (movie_id) references movies(id)
+    primary key (genre_id, movie_id),
+    foreign key (genre_id) references genres (id) on delete cascade,
+    foreign key (movie_id) references movies (id) on delete cascade
 );
 
-create table movies
-(
-    id           serial8 primary key,
-    title        varchar(100) not null,
-    release_year int2         not null,
-    rating       float4       not null
-);
-
-create table movies_actors(
+create table movies_actors (
     movie_id int8 not null,
     actor_id int8 not null,
-    foreign key (movie_id) references movies(id),
-    foreign key (actor_id) references actors(id)
-);
-
-create table actors
-(
-    id         serial8 primary key,
-    name       varchar(50) not null,
-    lastname   varchar(50) not null,
-    birth_year int2
+    primary key (movie_id, actor_id),
+    foreign key (movie_id) references movies (id) on delete cascade,
+    foreign key (actor_id) references actors (id) on delete cascade
 );
 ```
 
