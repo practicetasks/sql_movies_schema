@@ -336,7 +336,6 @@ insert into movies_genres (movie_id, genre_id) values (68, 11);
 insert into movies_genres (movie_id, genre_id) values (68, 1);
 insert into movies_genres (movie_id, genre_id) values (68, 16);
 insert into movies_genres (movie_id, genre_id) values (69, 3);
-insert into movies_genres (movie_id, genre_id) values (69, 3);
 insert into movies_genres (movie_id, genre_id) values (70, 11);
 insert into movies_genres (movie_id, genre_id) values (70, 2);
 insert into movies_genres (movie_id, genre_id) values (70, 1);
