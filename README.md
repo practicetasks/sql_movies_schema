@@ -8,13 +8,6 @@ create table genres (
     name varchar(50) not null
 );
 
-create table actors (
-    id serial8 primary key,
-    name varchar(50) not null,
-    lastname varchar(50) not null,
-    birth_year int2
-);
-
 create table movies (
     id serial8 primary key,
     title varchar(100) not null,
@@ -30,13 +23,6 @@ create table movies_genres (
     foreign key (movie_id) references movies (id) on delete cascade
 );
 
-create table movies_actors (
-    movie_id int8 not null,
-    actor_id int8 not null,
-    primary key (movie_id, actor_id),
-    foreign key (movie_id) references movies (id) on delete cascade,
-    foreign key (actor_id) references actors (id) on delete cascade
-);
 ```
 
 ### INSERTS
